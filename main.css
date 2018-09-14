@@ -1,0 +1,279 @@
+
+body {
+    margin-top: 0px;
+    font-family: 'proxima-nova', 'Raleway', Helvetica, sans-serif;
+    font-size: 16px;    
+  }
+  
+  /* ==== GLOBAL ==== */
+  
+  h1,h2,h3,h4,h5,h6 {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    font-weight: bold;
+  }
+  
+  h1 {
+    font-size: 3em;
+  }
+  
+  h1,h2 {
+    margin: 0 0 40px;
+  }
+  
+  h3 {
+    margin: 20px 0;
+  }
+  
+  h4 {
+    font-size: 18px;
+  }
+  
+  p.lead {
+    font-weight: normal;
+  }
+  
+  p {
+    margin: 0 0 15px;
+  }  
+
+  #navbar {
+    background-color: rgba(240, 60, 36, 0.6) !important;
+    color: #000;
+    font-size: 20px;    
+    opacity: 2%;
+    z-index: 1;       
+  }
+
+  #About{
+    background-image: url("img/tile.jpg");   
+    margin-top: 20px;    
+  }
+
+  #authors img {
+    margin-top: -50px; }
+  #authors .card:hover {
+    background: #3292a6;
+    color: #fff; }
+  #authors .fab {
+    color: #fff; }
+  
+  #Testimonials {   
+   background: url('img/tile.jpg') top left repeat;
+   height: 100%;   
+  }
+
+  #Testimonials img {
+    margin-top: -50px;     
+  }
+  
+  #featurette {
+    background: url('img/flag.jpg') 50% 100% repeat fixed;
+    text-align: center;
+    background-size: cover;  
+    color: white;
+  }
+    
+  #landing-header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 15vh;    
+  }
+
+  #landing-header img {
+    margin-top: -90px;
+  }
+  
+  #landing-header .card {
+    background-color: rgba(240, 60, 36, 0.6);
+    margin-bottom: 10px;
+  }
+
+  #landing-header .card:hover {
+    background: rgb(73, 72, 72);
+    color: #fff; }
+    #landing-header .fab {
+    color: #fff; }
+    
+   
+  .slideshow { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .slideshow li { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 33s linear infinite; 
+  }
+  
+  .slideshow li:nth-child(1) { 
+    background-image: url("img/blogging-blur-business-261662.jpg"); 
+  }
+  .slideshow li:nth-child(2) { 
+    background-image: url("img/blogging-business-coding-34140.jpg");  
+    animation-delay: 7s; 
+  }
+  .slideshow li:nth-child(3) { 
+    background-image: url("img/apple-device-blur-blurry-273222.jpg");  
+    animation-delay: 12s; 
+  }
+  .slideshow li:nth-child(4) { 
+    background-image: url("img/apple-black-and-white-business-196659.jpg"); 
+    animation-delay: 19s; 
+  }
+  .slideshow li:nth-child(5) { 
+    background-image: url("img/code-coder-codes-34600.jpg");  
+    animation-delay: 26s; 
+  }
+  
+  @keyframes imageAnimation { 
+    0% { 
+      opacity: 0; 
+      animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1
+    }
+    30% {
+      opacity: 0
+    }
+  }
+  
+  /* Older browser support - class added by modernizr */
+  .no-cssanimations .slideshow li {
+      opacity: 1;
+  }
+
+  #main-nav {
+    border-bottom: #484949 3px solid;
+    background-color: #000 !important;
+    font-size: 15px;
+  }
+  
+    
+  #home-heading {
+    position: relative;
+    min-height: 200px;
+    background: url('img/laptop2.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  #video-play {
+    position: relative;
+    min-height: 200px;
+    background: url('../img/media.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 0 -300px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  #video-play a {
+    color: #fff;
+  }
+  
+  #page-header {
+    height: 200px;
+    background: url('../img/image1.jpg');
+    background-position: 0 -360px;
+    background-attachment: fixed;
+    color: #fff;
+    border-bottom: 1px #eee solid;
+    padding-top: 50px;
+  }
+  
+  .about-img {
+    margin-top: -50px;
+  }
+  
+  #faq .card {
+    border: #444;
+  }
+  
+  #faq a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  #faq .card-body,
+  #faq .card-header {
+    background: #333;
+  }
+  
+  #main-footer {
+    background: black;
+    color: #fff;
+  }
+  
+  #home-icons {
+    background-color:  #3e4249;
+    color: white;    
+  }
+
+  #myhome {    
+    background-color: rgb(214, 214, 214)!important;    
+    color: black !important;
+    margin-top: 20px;
+  }
+
+  #cover {
+    margin-top: -100px;    
+  }
+
+  #cover .img,h1,h3 {
+    text-align: center;
+  }
+
+  .is-skill-icon {
+    align-items: center;
+  }
+
+  #centerfull {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  #blue {
+    background-color:  #7dcdfc!important;
+  }
+
+  #gray {
+    background-color:  #7cb5ff!important;
+  }
+ 
