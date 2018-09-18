@@ -56,16 +56,8 @@ body {
     background: #3292a6;
     color: #fff; }
   #authors .fab {
-    color: #fff; }
-  
-  #Testimonials {   
-   background: url('img/tile.jpg') top left repeat;
-   height: 100%;   
-  }
-
-  #Testimonials img {
-    margin-top: -50px;     
-  }
+    color: #fff; } 
+ 
   
   #featurette {
     background: url('img/flag.jpg') 50% 100% repeat fixed;
@@ -176,6 +168,7 @@ body {
     position: relative;
     min-height: 200px;
     background: url('img/laptop2.jpg');
+    background-size: cover; 
     background-attachment: fixed;
     background-repeat: no-repeat;
     text-align: center;
@@ -251,7 +244,7 @@ body {
   }
 
   #cover {
-    margin-top: -100px;    
+    margin-top: -80px;    
   }
 
   #cover .img,h1,h3 {
@@ -276,4 +269,11 @@ body {
   #gray {
     background-color:  #7cb5ff!important;
   }
+  
+  #all {
+    margin-top: 50px;
+  }
+  
+ 
+
  
