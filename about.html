@@ -36,11 +36,17 @@
                 </li>
             </ul>
         </div>        
-    </nav>    
-    <section id="myhome" class="bg-light text-muted py-5">
+    </nav>
+    <section id="myhome" class="py-4">
+        <div id="particles-js" style="background-color: rgb(56, 166, 218); background-image: url(&quot;&quot;); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;"><canvas class="position : absolute; width:100%;
+            height:100%; z-index:-1;"></canvas>
+            <!-- particles.js container -->
+            <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+            <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        </div>
         <div class="container">
             <div class="row">                
-                <div class="col-md-4">
+                <div class="col-md-4 py-4">
                     <img src="img/me1.png" alt="" class="img-fluid mb-3">
                 </div>
                 <div id="all" class="col-md-8">
@@ -51,7 +57,8 @@
                     <p>And i stand to my 4-R's in life to be Respectful to all, Reliable in every circumstances, Resilient to never give up, and Resourceful to always find ways.</p>
                 </div>                
             </div>          
-        </div>
+        </div>          
+    </div>
     </section>
     <section id="cover">
         <div class="container"> 
@@ -416,7 +423,7 @@
                         <p>My Other Skills</p>                
                     </div>
                     <div class="col-md-3 col-xl-3">
-                        <h4><a href="#About" class="nav-link">Future Websites<a></h4>    
+                        <h4><a href="#About" class="nav-link">Portfolio<a></h4>    
                         <p>Accounting Site</p>
                         <p>Services Site</p>
                         <p>Portfolio Site</p>
@@ -425,13 +432,13 @@
                         <p>Blogs Site</p>
                     </div>
                     <div class="col-md-3 col-xl-3">
-                        <h4><a href="#About" class="nav-link">My Clients<a></h4>                           
-                        <p>Accounting Site</p>
-                        <p>Services Site</p>
-                        <p>Portfolio Site</p>
-                        <p>Promotion Site</p>
-                        <p>Vlogs Site</p>
-                        <p>Blogs Site</p>
+                        <h4><a href="#About" class="nav-link">Testimonials<a></h4>                           
+                        <p>Trophies UK</p>
+                        <p>Dating Site</p>
+                        <p>Casino Chips Design</p>
+                        <p>Holographics Design</p>
+                        <p>Website Design</p>
+                        <p>Wordpress Design</p>
                     </div>
                     <div class="col-md-3 col-xl-3">
                         <h4><a href="#About" class="nav-link">Contact Us<a></h4> 
@@ -539,6 +546,84 @@
     crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener("hashchange", function() {
+	scrollBy(0, -55);
+    });
+
+    particlesJS("particles-js", {
+        particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: "#ffffff" },
+            shape: {
+                type: "circle",
+                stroke: { width: 0, color: "#000000" },
+                polygon: { nb_sides: 5 },
+                image: { src: "img/github.svg", width: 100, height: 100 }
+            },
+            opacity: {
+                value: 0.5,
+                random: false,
+                anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+            },
+            size: {
+                value: 3,
+                random: true,
+                anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
+            },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: "#ffffff",
+                opacity: 0.4,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 6,
+                direction: "none",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                bounce: false,
+                attract: { enable: false, rotateX: 600, rotateY: 1200 }
+            }
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onhover: { enable: true, mode: "repulse" },
+                onclick: { enable: true, mode: "push" },
+                resize: true
+            },
+            modes: {
+                grab: { distance: 400, line_linked: { opacity: 1 } },
+                bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+                repulse: { distance: 100, duration: 0.4 },
+                push: { particles_nb: 4 },
+                remove: { particles_nb: 2 }
+            }
+        },
+        retina_detect: true
+    });
+    var count_particles, stats, update;
+    stats = new Stats();
+    stats.setMode(0);
+    stats.domElement.style.position = "absolute";
+    stats.domElement.style.left = "0px";
+    stats.domElement.style.top = "0px";
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector(".js-count-particles");
+    update = function() {
+        stats.begin();
+        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+    </script>
     <script>
         // Get the current year for the copyright
         $('#year').text(new Date().getFullYear());
